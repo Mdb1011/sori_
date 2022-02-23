@@ -217,7 +217,18 @@ while True:
 						x = requests.get('https://api.codebazan.ir/mtproto/json')
 						x.json()['tedad']
 						bot.sendMessage(target, "✔"+ x, message_id=msg.get("message_id"))
-					
+					elif msg.get("text") == "وضعیت کرونا" and msg.get("author_object_guid") :
+						rm = requests.get('https://one-api.ir/corona/?token=476514:620feec6482515.96455647')
+						bot.sendMessage(target, "📟وضعیت بروز کرونا\n\n" + '😷مبتلا شده :'+ rm.json()['result']['entries'][11]['cases']+'‌‌\n\n🚑مرگ  و میر :'+rm.json()['result']['entries'][11]['deaths']+"‌\n\n🏨 بهبود یافته :"+rm.json()['result']['entries'][11]['recovered']+'‌\n\nخبر رسانی سوری👩', message_id=msg.get("message_id"))
+	
+					elif msg.get("text") == "فالمو بگیر" and msg.get("author_object_guid") :
+						bot.sendMessage(target, "⏳لطفا چند ثانیه صبر کنید...", message_id=msg.get("message_id"))
+						rm = requests.get('https://one-api.ir/hafez/?token=476514:620feec6482515.96455647')
+						bot.sendMessage(target, "فال سوری🎭\n" + rm.json()['result']['TITLE']+"\n🎡"+rm.json()['result']['RHYME']+"\n🗼"+rm.json()['result']['MEANING']+"‌\n@sori_bot", message_id=msg.get("message_id"))
+					elif msg.get("text") == "سنجاق" and msg.get("author_object_guid") in admins :
+						    bot.pin(target, msg["reply_to_message_id"])
+						    bot.sendMessage(target, "پـیـــام مـــــورد نـظــــر سـنـجــــاق شـــــــــد✓", message_id=msg.get("message_id"))
+						
 					
 						bot.sendMessage(target, x, message_id=msg.get("message_id"))
 					elif msg.get("text") == "ذکر امروز" and msg.get("author_object_guid") :
