@@ -1,8 +1,5 @@
 from re import findall
 from rubika.client import Bot
-from requests import get
-from rubika.encryption import encryption
-from rubika.tools import Tools
 import requests
 import time
 import random
