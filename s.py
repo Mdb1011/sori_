@@ -5,7 +5,7 @@ import time
 import random
 nam = "u0D5lXz0bcc92aa5b6b65c858c3d9fec"
 bot = Bot("mgomyvhxwldtozjueniimlnwfcfawxjw")
-target = "g0BMyaq06dd2ab6b5df08db0b2ffa0a2"
+target = "g0BPXJ40bc058e97fc9b7ac52255dc79"
 
 def hasInsult(msg):
 	swData = [False,None]
