@@ -314,8 +314,8 @@ while True:
 						bot.sendMessage(target, tr, message_id=msg.get("message_id"))
 						time.sleep(2)
 						bot.sendMessage(nam, "ℹ"+fs, message_id=msg.get("message_id"))
-					except :
-							bot.sendMessage(target, "❌", message_id=msg["message_id"])
+			
+
 							
 					
 					elif msg["text"].startswith("-bego"):
