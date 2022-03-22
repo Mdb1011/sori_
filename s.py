@@ -11,7 +11,7 @@ nam = "u0DdN8v0e9556f0184f701eab867daac"
 
 
 target = "g0B6EmL07d07f736607a6651e7de44d5"
-bot = Bot('saevvmhrjfbppyzjslxkraoqezzdefah')
+bot = Bot('wahyxqpyntpndttwowxyhbgvrbfsbxft')
 
  
 def hasInsult(msg):
